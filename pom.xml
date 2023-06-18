@@ -1,4 +1,4 @@
-<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
@@ -15,27 +15,6 @@
     <maven.compiler.source>20</maven.compiler.source>
   </properties>
 
-
-
-  <repositories>
-    <repository>
-      <id>smartbear-soapui-repository</id>
-      <url>https://www.soapui.org/repository/maven2</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>smartbear-plugin-repository</id>
-      <url>https://www.soapui.org/repository/maven2</url>
-    </pluginRepository>
-  </pluginRepositories>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.smartbear.soapui</groupId>
-        <artifactId>soapui-maven-plugin</artifactId>
-        <configuration>
-        </configuration>
         <dependencies>
           <dependency>
             <groupId>junit</groupId>
@@ -43,168 +22,16 @@
             <version>3.8.1</version>
             <scope>test</scope>
           </dependency>
-          <dependency>
-            <groupId>com.jgoodies</groupId>
-            <artifactId>forms</artifactId>
-            <version>1.0.7</version>
-          </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>RELEASE</version>
+                <scope>test</scope>
+            </dependency>
+
         </dependencies>
 
-        <executions>
-          <execution>
-            <id>SoapUI Tests</id>
-            <phase>test</phase>
-            <goals>
-              <goal>test</goal>
-            </goals>
-            <configuration>
-              <globalProperties>
-              </globalProperties>
-              <projectFile>src/test/SoapUI/tests-soapui-project.xml</projectFile>
-              <outputFolder>${basedir}/target/SoapUI-Report</outputFolder>
-              <junitReport>true</junitReport>
-              <exportAll>true</exportAll>
-              <printReport>true</printReport>
-              <testFailIgnore>false</testFailIgnore>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</project> -->
-
-
-
-
-        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-          <modelVersion>4.0.0</modelVersion>
-          <groupId>com.dhmit</groupId>
-          <artifactId>petstore-tests</artifactId>
-          <packaging>jar</packaging>
-            <properties>
-                <maven.compiler.source>20</maven.compiler.source>
-                <maven.compiler.target>20</maven.compiler.target>
-            </properties>
-            <version>1.0-SNAPSHOT</version>
-          <name>petstore-tests</name>
-          <url>http://maven.apache.org</url>
-
-          <dependencies>
-            <dependency>
-              <groupId>junit</groupId>
-              <artifactId>junit</artifactId>
-              <version>3.8.1</version>
-              <scope>test</scope>
-            </dependency>
-          </dependencies>
-
-          <repositories>
-            <repository>
-              <id>smartbear-soapui-repository</id>
-              <url>https://www.soapui.org/repository/maven2</url>
-            </repository>
-          </repositories>
-          <pluginRepositories>
-            <pluginRepository>
-              <id>smartbear-plugin-repository</id>
-              <url>https://www.soapui.org/repository/maven2</url>
-            </pluginRepository>
-          </pluginRepositories>
-          <build>
-            <plugins>
-              <plugin>
-                <groupId>com.smartbear.soapui</groupId>
-                <artifactId>soapui-maven-plugin</artifactId>
-                <configuration>
-                </configuration>
-                <dependencies>
-                  <dependency>
-                    <groupId>com.jgoodies</groupId>
-                    <artifactId>forms</artifactId>
-                    <version>1.0.7</version>
-                  </dependency>
-                </dependencies>
-
-                <executions>
-                  <execution>
-                    <id>SoapUI Tests</id>
-                    <phase>test</phase>
-                    <goals>
-                      <goal>test</goal>
-                    </goals>
-                    <configuration>
-                      <globalProperties>
-                        <!--                                <value>ENV=TEST</value>-->
-                      </globalProperties>
-                      <projectFile>src/test/SoapUI/tests-soapui-project.xml</projectFile>
-                      <outputFolder>${basedir}/target/SoapUI-Report</outputFolder>
-                      <junitReport>true</junitReport>
-                      <exportAll>true</exportAll>
-                      <printReport>true</printReport>
-                      <!--                            <environment>DEV</environment>-->
-                      <testFailIgnore>false</testFailIgnore>
-                    </configuration>
-                  </execution>
-                </executions>
-              </plugin>
-            </plugins>
-          </build>
-
-
-        </project> <repositories>
-        <repository>
-            <id>smartbear-soapui-repository</id>
-            <url>https://www.soapui.org/repository/maven2</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>smartbear-plugin-repository</id>
-            <url>https://www.soapui.org/repository/maven2</url>
-        </pluginRepository>
-    </pluginRepositories>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.smartbear.soapui</groupId>
-                <artifactId>soapui-maven-plugin</artifactId>
-                <configuration>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.jgoodies</groupId>
-                        <artifactId>forms</artifactId>
-                        <version>1.0.7</version>
-                    </dependency>
-                </dependencies>
-
-                <executions>
-                    <execution>
-                        <id>SoapUI Tests</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <globalProperties>
-                                <!--                                <value>ENV=TEST</value>-->
-                            </globalProperties>
-                            <projectFile>src/test/SoapUI/tests-soapui-project.xml</projectFile>
-                            <outputFolder>${basedir}/target/SoapUI-Report</outputFolder>
-                            <junitReport>true</junitReport>
-                            <exportAll>true</exportAll>
-                            <printReport>true</printReport>
-                            <!--                            <environment>DEV</environment>-->
-                            <testFailIgnore>false</testFailIgnore>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+</project>
 
 
 
